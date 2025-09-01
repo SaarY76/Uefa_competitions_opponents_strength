@@ -66,7 +66,7 @@ def scrape_tm_fixtures(fixtures_url):
 def calculate_opponent_info(opp_map, values):
     rows = []
     for team, opponents in opp_map.items():
-        # Sort opponents by market value descending
+        # Sorting opponents by market value descending
         sorted_opponents = sorted(
             [o for o in opponents if values.get(o, 0.0) > 0.0],
             key=lambda x: values[x],
@@ -74,18 +74,18 @@ def calculate_opponent_info(opp_map, values):
         )
         opp_vals = [values[o] for o in sorted_opponents]
         avg = round(sum(opp_vals)/len(opp_vals), 3) if opp_vals else 0.0
-        # Format opponents for HTML display
+        # Formatting opponents for HTML display
         opp_info_str = "<br>".join([f"{o} ({values[o]} M€)" for o in sorted_opponents])
-        # Add current team’s value in parentheses
+        # Adding current team’s value in parentheses
         team_with_value = f"{team} ({values.get(team, 0.0)} M€)"
         rows.append((team_with_value, avg, opp_info_str))
-    # Sort by avg opponent market value (descending)
+    # Sorting by avg opponent market value (descending)
     return sorted(rows, key=lambda x: x[1], reverse=True)
 
 # -------------------- HTML Export --------------------
 def export_to_html(data, competition_name):
     filename = competition_name.lower().replace(" ", "_") + "_opponents.html"
-    # Insert ranking numbers
+    # Inserting ranking numbers
     ranked_data = [(i+1, *row) for i, row in enumerate(data)]
     df = pd.DataFrame(
         ranked_data, 
@@ -122,6 +122,63 @@ def export_to_html(data, competition_name):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html_content)
     print(f"\nHTML file created: {filename}")
+    
+
+# -------------------- Ratio Calculation --------------------
+def calculate_ratio_table(avg_opponent_info, values):
+    """
+    Creating a table with the club's value, average opponent value, and ratio.
+    """
+    rows = []
+    for team_with_val, avg, _ in avg_opponent_info:
+        # Extracting pure team name (remove value in parentheses)
+        team = team_with_val.split(" (")[0]
+        team_value = values.get(team, 0.0)
+        ratio = round(team_value / avg, 3) if avg > 0 else 0.0
+        rows.append((team_with_val, team_value, avg, ratio))
+    # Sorting by ratio descending
+    return sorted(rows, key=lambda x: x[3], reverse=True)
+
+# -------------------- Ratio HTML Export --------------------
+def export_ratio_table(ratio_data, competition_name):
+    filename = competition_name.lower().replace(" ", "_") + "_ratios.html"
+    ranked_data = [(i+1, *row) for i, row in enumerate(ratio_data)]
+    df = pd.DataFrame(
+        ranked_data,
+        columns=["Rank", "Team", "Team Market Value (M€)", "Avg Opponent Market Value (M€)", "Ratio"]
+    )
+    html_content = f"""
+    <html>
+    <head>
+        <title>{competition_name} Value-to-Opponents Ratio</title>
+        <style>
+            table {{
+                border-collapse: collapse;
+                width: 100%;
+            }}
+            th, td {{
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }}
+            th {{
+                background-color: #4CAF50;
+                color: white;
+            }}
+            tr:nth-child(even){{background-color: #f2f2f2;}}
+            tr:hover {{background-color: #ddd;}}
+        </style>
+    </head>
+    <body>
+        <h2>{competition_name} Team Strength Ratios</h2>
+        {df.to_html(index=False, escape=False)}
+    </body>
+    </html>
+    """
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(html_content)
+    print(f"HTML ratio file created: {filename}")
+    
 
 
 # -------------------- Main Workflow --------------------
@@ -143,6 +200,10 @@ def main():
     # Export to HTML
     export_to_html(avg_opponent_info, comp_name)
 
+    # Export ratio table as well
+    ratio_table = calculate_ratio_table(avg_opponent_info, tm_values)
+    export_ratio_table(ratio_table, comp_name)
+
+
 if __name__ == "__main__":
     main()
-
