@@ -63,7 +63,6 @@ def scrape_tm_fixtures(fixtures_url):
     return opp_map
 
 # -------------------- Calculation --------------------
-# -------------------- Calculation --------------------
 def calculate_opponent_info(opp_map, values):
     rows = []
     for team, opponents in opp_map.items():
@@ -146,3 +145,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
