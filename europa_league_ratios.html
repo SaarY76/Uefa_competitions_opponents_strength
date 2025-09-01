@@ -1,0 +1,292 @@
+
+    <html>
+    <head>
+        <title>Europa League Value-to-Opponents Ratio</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+            tr:nth-child(even){background-color: #f2f2f2;}
+            tr:hover {background-color: #ddd;}
+        </style>
+    </head>
+    <body>
+        <h2>Europa League Team Strength Ratios</h2>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Rank</th>
+      <th>Team</th>
+      <th>Team Market Value (M€)</th>
+      <th>Avg Opponent Market Value (M€)</th>
+      <th>Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Nottingham Forest (540.5 M€)</td>
+      <td>540.50</td>
+      <td>118.951</td>
+      <td>4.544</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Aston Villa (489.0 M€)</td>
+      <td>489.00</td>
+      <td>142.382</td>
+      <td>3.434</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>AS Roma (389.68 M€)</td>
+      <td>389.68</td>
+      <td>143.470</td>
+      <td>2.716</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>FC Porto (345.5 M€)</td>
+      <td>345.50</td>
+      <td>144.426</td>
+      <td>2.392</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Olympique Lyon (181.45 M€)</td>
+      <td>181.45</td>
+      <td>79.901</td>
+      <td>2.271</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Fenerbahce (323.13 M€)</td>
+      <td>323.13</td>
+      <td>150.093</td>
+      <td>2.153</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>VfB Stuttgart (312.63 M€)</td>
+      <td>312.63</td>
+      <td>156.705</td>
+      <td>1.995</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Bologna FC 1909 (280.7 M€)</td>
+      <td>280.70</td>
+      <td>141.045</td>
+      <td>1.990</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>LOSC Lille (215.9 M€)</td>
+      <td>215.90</td>
+      <td>126.489</td>
+      <td>1.707</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>KRC Genk (135.75 M€)</td>
+      <td>135.75</td>
+      <td>89.535</td>
+      <td>1.516</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>SC Freiburg (162.7 M€)</td>
+      <td>162.70</td>
+      <td>124.433</td>
+      <td>1.308</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Feyenoord Rotterdam (213.35 M€)</td>
+      <td>213.35</td>
+      <td>181.230</td>
+      <td>1.177</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>SC Braga (163.5 M€)</td>
+      <td>163.50</td>
+      <td>175.369</td>
+      <td>0.932</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Real Betis Balompié (154.0 M€)</td>
+      <td>154.00</td>
+      <td>167.241</td>
+      <td>0.921</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>PAOK Thessaloniki (96.38 M€)</td>
+      <td>96.38</td>
+      <td>106.748</td>
+      <td>0.903</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>OGC Nice (171.6 M€)</td>
+      <td>171.60</td>
+      <td>197.870</td>
+      <td>0.867</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Celtic FC (138.9 M€)</td>
+      <td>138.90</td>
+      <td>165.926</td>
+      <td>0.837</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Celta de Vigo (122.0 M€)</td>
+      <td>122.00</td>
+      <td>157.370</td>
+      <td>0.775</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Panathinaikos FC (86.25 M€)</td>
+      <td>86.25</td>
+      <td>113.090</td>
+      <td>0.763</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Rangers FC (96.4 M€)</td>
+      <td>96.40</td>
+      <td>151.914</td>
+      <td>0.635</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Red Bull Salzburg (116.4 M€)</td>
+      <td>116.40</td>
+      <td>200.994</td>
+      <td>0.579</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Red Star Belgrade (78.2 M€)</td>
+      <td>78.20</td>
+      <td>141.068</td>
+      <td>0.554</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>Ludogorets Razgrad (48.2 M€)</td>
+      <td>48.20</td>
+      <td>101.064</td>
+      <td>0.477</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>FC Midtjylland (77.9 M€)</td>
+      <td>77.90</td>
+      <td>171.030</td>
+      <td>0.455</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>BSC Young Boys (81.5 M€)</td>
+      <td>81.50</td>
+      <td>184.780</td>
+      <td>0.441</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>GNK Dinamo Zagreb (55.35 M€)</td>
+      <td>55.35</td>
+      <td>125.421</td>
+      <td>0.441</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>FC Basel 1893 (70.9 M€)</td>
+      <td>70.90</td>
+      <td>186.818</td>
+      <td>0.380</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>SK Sturm Graz (57.13 M€)</td>
+      <td>57.13</td>
+      <td>157.200</td>
+      <td>0.363</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>FCSB (48.43 M€)</td>
+      <td>48.43</td>
+      <td>141.422</td>
+      <td>0.342</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>FC Utrecht (66.95 M€)</td>
+      <td>66.95</td>
+      <td>210.613</td>
+      <td>0.318</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Ferencvárosi TC (49.45 M€)</td>
+      <td>49.45</td>
+      <td>174.351</td>
+      <td>0.284</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>FC Viktoria Plzen (48.18 M€)</td>
+      <td>48.18</td>
+      <td>183.099</td>
+      <td>0.263</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Malmö FF (37.18 M€)</td>
+      <td>37.18</td>
+      <td>167.241</td>
+      <td>0.222</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>SK Brann (26.1 M€)</td>
+      <td>26.10</td>
+      <td>151.811</td>
+      <td>0.172</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Go Ahead Eagles (28.25 M€)</td>
+      <td>28.25</td>
+      <td>196.157</td>
+      <td>0.144</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Maccabi Tel Aviv (24.83 M€)</td>
+      <td>24.83</td>
+      <td>207.014</td>
+      <td>0.120</td>
+    </tr>
+  </tbody>
+</table>
+    </body>
+    </html>
+    

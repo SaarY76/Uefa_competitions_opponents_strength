@@ -1,0 +1,292 @@
+
+    <html>
+    <head>
+        <title>Conference League Value-to-Opponents Ratio</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+            tr:nth-child(even){background-color: #f2f2f2;}
+            tr:hover {background-color: #ddd;}
+        </style>
+    </head>
+    <body>
+        <h2>Conference League Team Strength Ratios</h2>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Rank</th>
+      <th>Team</th>
+      <th>Team Market Value (M€)</th>
+      <th>Avg Opponent Market Value (M€)</th>
+      <th>Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Shakhtar Donetsk (141.4 M€)</td>
+      <td>141.40</td>
+      <td>17.953</td>
+      <td>7.876</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Crystal Palace (421.2 M€)</td>
+      <td>421.20</td>
+      <td>81.635</td>
+      <td>5.160</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>ACF Fiorentina (302.83 M€)</td>
+      <td>302.83</td>
+      <td>60.657</td>
+      <td>4.992</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Rayo Vallecano (73.9 M€)</td>
+      <td>73.90</td>
+      <td>22.468</td>
+      <td>3.289</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>RC Strasbourg Alsace (283.15 M€)</td>
+      <td>283.15</td>
+      <td>86.888</td>
+      <td>3.259</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>AC Sparta Prague (73.48 M€)</td>
+      <td>73.48</td>
+      <td>26.393</td>
+      <td>2.784</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>1.FSV Mainz 05 (138.58 M€)</td>
+      <td>138.58</td>
+      <td>73.112</td>
+      <td>1.895</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>AZ Alkmaar (110.83 M€)</td>
+      <td>110.83</td>
+      <td>83.607</td>
+      <td>1.326</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Raków Częstochowa (37.1 M€)</td>
+      <td>37.10</td>
+      <td>29.695</td>
+      <td>1.249</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>AEK Athens (70.98 M€)</td>
+      <td>70.98</td>
+      <td>66.770</td>
+      <td>1.063</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Lech Poznan (43.8 M€)</td>
+      <td>43.80</td>
+      <td>49.155</td>
+      <td>0.891</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Legia Warszawa (41.3 M€)</td>
+      <td>41.30</td>
+      <td>47.143</td>
+      <td>0.876</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>HNK Rijeka (35.73 M€)</td>
+      <td>35.73</td>
+      <td>41.727</td>
+      <td>0.856</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Samsunspor (44.63 M€)</td>
+      <td>44.63</td>
+      <td>55.620</td>
+      <td>0.802</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Rapid Vienna (40.7 M€)</td>
+      <td>40.70</td>
+      <td>71.857</td>
+      <td>0.566</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Dynamo Kyiv (73.9 M€)</td>
+      <td>73.90</td>
+      <td>134.337</td>
+      <td>0.550</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Slovan Bratislava (30.58 M€)</td>
+      <td>30.58</td>
+      <td>83.397</td>
+      <td>0.367</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>FC Lausanne-Sport (23.2 M€)</td>
+      <td>23.20</td>
+      <td>63.153</td>
+      <td>0.367</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>CS Universitatea Craiova (22.5 M€)</td>
+      <td>22.50</td>
+      <td>62.215</td>
+      <td>0.362</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>FC Noah Yerevan (12.45 M€)</td>
+      <td>12.45</td>
+      <td>34.552</td>
+      <td>0.360</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Jagiellonia Bialystok (28.05 M€)</td>
+      <td>28.05</td>
+      <td>80.857</td>
+      <td>0.347</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>Omonia Nicosia (16.88 M€)</td>
+      <td>16.88</td>
+      <td>53.302</td>
+      <td>0.317</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>NK Celje (8.93 M€)</td>
+      <td>8.93</td>
+      <td>28.728</td>
+      <td>0.311</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>BK Häcken (19.95 M€)</td>
+      <td>19.95</td>
+      <td>68.523</td>
+      <td>0.291</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>SK Sigma Olomouc (16.58 M€)</td>
+      <td>16.58</td>
+      <td>67.847</td>
+      <td>0.244</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Shkendija Tetovo (6.1 M€)</td>
+      <td>6.10</td>
+      <td>25.723</td>
+      <td>0.237</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>Aberdeen FC (17.3 M€)</td>
+      <td>17.30</td>
+      <td>98.932</td>
+      <td>0.175</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>FC Drita (6.33 M€)</td>
+      <td>6.33</td>
+      <td>36.252</td>
+      <td>0.175</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>HSK Zrinjski Mostar (8.03 M€)</td>
+      <td>8.03</td>
+      <td>52.033</td>
+      <td>0.154</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>AEK Larnaca (12.13 M€)</td>
+      <td>12.13</td>
+      <td>101.852</td>
+      <td>0.119</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>Hamrun Spartans (4.71 M€)</td>
+      <td>4.71</td>
+      <td>40.613</td>
+      <td>0.116</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Shamrock Rovers (4.43 M€)</td>
+      <td>4.43</td>
+      <td>50.625</td>
+      <td>0.088</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>Lincoln Red Imps FC (1.97 M€)</td>
+      <td>1.97</td>
+      <td>25.025</td>
+      <td>0.079</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>Kuopion Palloseura (6.45 M€)</td>
+      <td>6.45</td>
+      <td>85.602</td>
+      <td>0.075</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Breidablik Kópavogur (4.25 M€)</td>
+      <td>4.25</td>
+      <td>83.877</td>
+      <td>0.051</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Shelbourne FC (3.35 M€)</td>
+      <td>3.35</td>
+      <td>95.557</td>
+      <td>0.035</td>
+    </tr>
+  </tbody>
+</table>
+    </body>
+    </html>
+    

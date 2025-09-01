@@ -1,0 +1,292 @@
+
+    <html>
+    <head>
+        <title>Champions League Value-to-Opponents Ratio</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: #4CAF50;
+                color: white;
+            }
+            tr:nth-child(even){background-color: #f2f2f2;}
+            tr:hover {background-color: #ddd;}
+        </style>
+    </head>
+    <body>
+        <h2>Champions League Team Strength Ratios</h2>
+        <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Rank</th>
+      <th>Team</th>
+      <th>Team Market Value (M€)</th>
+      <th>Avg Opponent Market Value (M€)</th>
+      <th>Ratio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Arsenal FC (1360.0 M€)</td>
+      <td>1360.00</td>
+      <td>369.654</td>
+      <td>3.679</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Real Madrid (1400.0 M€)</td>
+      <td>1400.00</td>
+      <td>494.738</td>
+      <td>2.830</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Manchester City (1250.0 M€)</td>
+      <td>1250.00</td>
+      <td>464.714</td>
+      <td>2.690</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Chelsea FC (1140.0 M€)</td>
+      <td>1140.00</td>
+      <td>434.254</td>
+      <td>2.625</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Tottenham Hotspur (890.1 M€)</td>
+      <td>890.10</td>
+      <td>343.751</td>
+      <td>2.589</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>FC Barcelona (1120.0 M€)</td>
+      <td>1120.00</td>
+      <td>482.004</td>
+      <td>2.324</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Liverpool FC (1030.0 M€)</td>
+      <td>1030.00</td>
+      <td>500.664</td>
+      <td>2.057</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Paris Saint-Germain (1180.0 M€)</td>
+      <td>1180.00</td>
+      <td>671.275</td>
+      <td>1.758</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Bayern Munich (857.5 M€)</td>
+      <td>857.50</td>
+      <td>583.725</td>
+      <td>1.469</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Inter Milan (704.8 M€)</td>
+      <td>704.80</td>
+      <td>482.610</td>
+      <td>1.460</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Newcastle United (747.05 M€)</td>
+      <td>747.05</td>
+      <td>523.338</td>
+      <td>1.427</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Juventus FC (510.7 M€)</td>
+      <td>510.70</td>
+      <td>410.523</td>
+      <td>1.244</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Atlético de Madrid (627.8 M€)</td>
+      <td>627.80</td>
+      <td>513.808</td>
+      <td>1.222</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>SSC Napoli (470.85 M€)</td>
+      <td>470.85</td>
+      <td>483.810</td>
+      <td>0.973</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Sporting CP (465.8 M€)</td>
+      <td>465.80</td>
+      <td>492.406</td>
+      <td>0.946</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Atalanta BC (439.1 M€)</td>
+      <td>439.10</td>
+      <td>467.916</td>
+      <td>0.938</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Bayer 04 Leverkusen (483.25 M€)</td>
+      <td>483.25</td>
+      <td>521.369</td>
+      <td>0.927</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Borussia Dortmund (438.1 M€)</td>
+      <td>438.10</td>
+      <td>509.660</td>
+      <td>0.860</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>Olympique Marseille (367.4 M€)</td>
+      <td>367.40</td>
+      <td>567.350</td>
+      <td>0.648</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Galatasaray (303.58 M€)</td>
+      <td>303.58</td>
+      <td>489.510</td>
+      <td>0.620</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>Athletic Bilbao (367.4 M€)</td>
+      <td>367.40</td>
+      <td>595.383</td>
+      <td>0.617</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>AS Monaco (342.8 M€)</td>
+      <td>342.80</td>
+      <td>575.233</td>
+      <td>0.596</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>SL Benfica (337.8 M€)</td>
+      <td>337.80</td>
+      <td>622.510</td>
+      <td>0.543</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Eintracht Frankfurt (326.9 M€)</td>
+      <td>326.90</td>
+      <td>613.314</td>
+      <td>0.533</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>Ajax Amsterdam (203.15 M€)</td>
+      <td>203.15</td>
+      <td>401.233</td>
+      <td>0.506</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>Villarreal CF (224.8 M€)</td>
+      <td>224.80</td>
+      <td>483.875</td>
+      <td>0.465</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>PSV Eindhoven (249.75 M€)</td>
+      <td>249.75</td>
+      <td>550.494</td>
+      <td>0.454</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>Club Brugge KV (172.6 M€)</td>
+      <td>172.60</td>
+      <td>620.675</td>
+      <td>0.278</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>Olympiacos Piraeus (106.4 M€)</td>
+      <td>106.40</td>
+      <td>606.188</td>
+      <td>0.176</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>SK Slavia Prague (107.93 M€)</td>
+      <td>107.93</td>
+      <td>619.535</td>
+      <td>0.174</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>FC Copenhagen (75.15 M€)</td>
+      <td>75.15</td>
+      <td>458.123</td>
+      <td>0.164</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>Union Saint-Gilloise (81.1 M€)</td>
+      <td>81.10</td>
+      <td>537.122</td>
+      <td>0.151</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>FK Bodø/Glimt (54.33 M€)</td>
+      <td>54.33</td>
+      <td>558.876</td>
+      <td>0.097</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>Qarabağ FK (25.08 M€)</td>
+      <td>25.08</td>
+      <td>493.906</td>
+      <td>0.051</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>Pafos FC (20.55 M€)</td>
+      <td>20.55</td>
+      <td>412.866</td>
+      <td>0.050</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>Kairat Almaty (12.8 M€)</td>
+      <td>12.80</td>
+      <td>538.163</td>
+      <td>0.024</td>
+    </tr>
+  </tbody>
+</table>
+    </body>
+    </html>
+    
