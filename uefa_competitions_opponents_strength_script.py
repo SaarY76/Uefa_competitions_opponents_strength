@@ -63,6 +63,7 @@ def scrape_tm_fixtures(fixtures_url):
     return opp_map
 
 # -------------------- Calculation --------------------
+# -------------------- Calculation --------------------
 def calculate_opponent_info(opp_map, values):
     rows = []
     for team, opponents in opp_map.items():
@@ -76,13 +77,21 @@ def calculate_opponent_info(opp_map, values):
         avg = round(sum(opp_vals)/len(opp_vals), 3) if opp_vals else 0.0
         # Format opponents for HTML display
         opp_info_str = "<br>".join([f"{o} ({values[o]} M€)" for o in sorted_opponents])
-        rows.append((team, avg, opp_info_str))
+        # Add current team’s value in parentheses
+        team_with_value = f"{team} ({values.get(team, 0.0)} M€)"
+        rows.append((team_with_value, avg, opp_info_str))
+    # Sort by avg opponent market value (descending)
     return sorted(rows, key=lambda x: x[1], reverse=True)
 
 # -------------------- HTML Export --------------------
 def export_to_html(data, competition_name):
     filename = competition_name.lower().replace(" ", "_") + "_opponents.html"
-    df = pd.DataFrame(data, columns=["Team", "Avg Opponent Market Value (M€)", "Opponents (M€)"])
+    # Insert ranking numbers
+    ranked_data = [(i+1, *row) for i, row in enumerate(data)]
+    df = pd.DataFrame(
+        ranked_data, 
+        columns=["Rank", "Team", "Avg Opponent Market Value (M€)", "Opponents (M€)"]
+    )
     html_content = f"""
     <html>
     <head>
@@ -114,6 +123,7 @@ def export_to_html(data, competition_name):
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html_content)
     print(f"\nHTML file created: {filename}")
+
 
 # -------------------- Main Workflow --------------------
 def main():
